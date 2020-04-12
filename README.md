@@ -26,29 +26,28 @@
     - 由於 alpha 是找最大值 -> 所以 alpha 不管怎麼找下去 都不可能再選這個分支
         - 因此可以停止搜索這個分支
 ```python
-    def minimax_alpha_beta(self,simulate_board,me, advensary, alpha, beta):
-        if self.win_dis_with_board(simulate_board, 'C') == WIN:
-            return 1
-        elif self.win_dis_with_board(simulate_board, 'P') == WIN:
-            return -1
+def minimax_alpha_beta(self,simulate_board,me, advensary, alpha, beta):
+    if self.win_dis_with_board(simulate_board, 'C') == WIN:
+        return 1
+    elif self.win_dis_with_board(simulate_board, 'P') == WIN:
+        return -1
 
-        empty_set = self.get_empty_set(simulate_board)
-        if empty_set != []:
-            for check in empty_set:
-                simulate_board[check] = me
-                result = self.minimax_alpha_beta(simulate_board, advensary, me, alpha, beta)
-                simulate_board[check] = ' '
-                if me == COMPUTER:
-                    alpha = max(alpha, result)
-                else:
-                    beta = min(beta, result)
-                if beta <= alpha:
-                    break
+    empty_set = self.get_empty_set(simulate_board)
+    if empty_set != []:
+        for check in empty_set:
+            simulate_board[check] = me
+            result = self.minimax_alpha_beta(simulate_board, advensary, me, alpha, beta)
+            simulate_board[check] = ' '
             if me == COMPUTER:
-                return alpha
+                alpha = max(alpha, result)
             else:
-                return beta
+                beta = min(beta, result)
+            if beta <= alpha:
+                break
+        if me == COMPUTER:
+            return alpha
         else:
-            return 0
-
+            return beta
+     else:
+        return 0
 ```
