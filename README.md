@@ -12,7 +12,7 @@
         <td> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(3).png width="270"> </td> 
    </tr>
    <tr>
-        <td bgcolor="green"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(4).png width="270"> </td> 
+        <td> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(4).png width="270"> </td> 
    </tr>
 </table>
 
