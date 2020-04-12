@@ -18,6 +18,46 @@
 
 ---
 ## Code
+### MiniMax Algorithm 
+```python
+def minimax(self,simulate_board, me, advensary):
+#判斷是否產生勝負
+    if self.win_dis(simulate_board, 'C') == WIN:
+        return 1
+    elif self.win_dis(simulate_board, 'P') == WIN:
+        return -1
+
+    #若沒產生勝負 找到還沒被填入過的格子
+    empty_set = self.get_empty_set(simulate_board)
+
+    #根據 minimax alg 由於從電腦的立場來看 在自己的回合要找到最好的結果 在玩家的回合要找到對自己最差的結果
+    #因此 把找極值得值 初始化
+    if me == COMPUTER:
+        minimax_result = -2
+    else:
+        minimax_result = 2
+
+    #如果有空位
+    if empty_set != []:
+        for check in empty_set:
+            #從沒有填入過值得格子中 選一個填入 當前回合的玩家代號
+            #遞迴找出結果
+            #如果是電腦 則找最大值 玩家找最小值 
+            simulate_board[check] = me
+            result = self.minimax(simulate_board, advensary, me)
+            if me == COMPUTER:
+                minimax_result = max(minimax_result, result)
+            else:
+                minimax_result = min(minimax_result, result)
+            simulate_board[check] = ' '
+        return minimax_result
+    #如果沒有空位 亦沒有勝負 代表和局
+    else:
+        return 0
+```
+
+
+### MiniMax Alpha Beta Algorithm 
 - alpha 代表的是目前下界 beta 代表上界
 - 在 電腦的回合 只更新 對電腦來說最好結果 的 下界 (也就是至少有那麼多)
 - 在 玩家的回合 只更新 對電腦來說最差結果 的 上界 (也就是不會再更差了)
