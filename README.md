@@ -3,7 +3,7 @@
 ---
 ## Outcome
 - It's a game that the best play from both parties leads to a draw.
-- With means after using Mini-Max Algorithm you can never win computer.
+- Witch means after using Mini-Max Algorithm you can never win computer.
 
 <table>
     <tr>
