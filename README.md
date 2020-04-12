@@ -7,12 +7,12 @@
 
 <table>
     <tr>
-        <td rowspan = "2"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(2).png width="263"> </td> 
-        <td rowspan = "2"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(1).png width="263"> </td> 
-        <td> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(3).png width="263"> </td> 
+        <td rowspan = "2"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(2).png width="270"> </td> 
+        <td rowspan = "2"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(1).png width="270"> </td> 
+        <td> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(3).png width="270"> </td> 
    </tr>
    <tr>
-        <td bgcolor="green"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(4).png width="263"> </td> 
+        <td bgcolor="green"> <img src=https://github.com/wewanadi/GUI-tictactoe/blob/master/.picture/tictactoe%20(4).png width="270"> </td> 
    </tr>
 </table>
 
